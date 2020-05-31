@@ -5,5 +5,8 @@ function updateDriverWithKeyAndValue(obj, key, value){
     return obj;
 }
 
-let newObj = updateDriverWithKeyAndValue(driver, "name", "hossien");
-console.log(newObj.name);
+function destructivelyUpdateDriverWithKeyAndValue(obj, key, value){
+  let newObj = {...obj};
+  newObj[key] = value;
+  return newObj;
+}
